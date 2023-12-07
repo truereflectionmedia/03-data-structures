@@ -216,29 +216,6 @@ describe("bae.map", function () {
   });
 });
 
-describe("bae.contains", function () {
-  it("should return true if a collection contains a user-specified value", function () {
-    var numbers = [1, 2, 3];
-    var result = bae.contains(numbers, 2);
-
-    expect(result).toEqual(true);
-  });
-
-  it("should return false if a collection does not contain a user-specified value", function () {
-    var numbers = [1, 2, 3];
-    var result = bae.contains(numbers, 4);
-
-    expect(result).toEqual(false);
-  });
-
-  it("should handle objects", function () {
-    var obj = { a: 1, b: 2 };
-    var result = bae.contains(obj, 1);
-
-    expect(result).toEqual(true);
-  });
-});
-
 describe("bae.reduce", function () {
   it("should be able to sum up an array", function () {
     var add = function (tally, item) {
@@ -274,5 +251,28 @@ describe("bae.reduce", function () {
     var total = bae.reduce([2, 3], sumSquares);
 
     expect(total).toEqual(11);
+  });
+});
+
+describe("bae.contains", function () {
+  it("should return true if a collection contains a user-specified value", function () {
+    var numbers = [1, 2, 3];
+    var result = bae.contains(numbers, 2);
+
+    expect(result).toEqual(true);
+  });
+
+  it("should return false if a collection does not contain a user-specified value", function () {
+    var numbers = [1, 2, 3];
+    var result = bae.contains(numbers, 4);
+
+    expect(result).toEqual(false);
+  });
+
+  it("should handle objects", function () {
+    var obj = { a: 1, b: 2 };
+    var result = bae.contains(obj, 1);
+
+    expect(result).toEqual(true);
   });
 });
