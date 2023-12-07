@@ -65,8 +65,8 @@ function addTodo(e) {
 
 function toggleCompleted(e) {
   // Your code here
-  const todoText = e.target;
-  todoText.classList.toggle("completed");
+  const todoTextElement = e.target;
+  todoTextElement.classList.toggle("completed");
 }
 
 // Execution

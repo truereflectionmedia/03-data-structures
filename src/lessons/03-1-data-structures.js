@@ -31,8 +31,7 @@ bae.last = function (array, n) {
 // Return an array of the first n elements of an array. If n is undefined,
 // return just the first element.
 bae.first = function (array, n) {
-  // TIP: you can often re-use similar functions in clever ways, like so:
-  return [].reverse.call(bae.last([].reverse.call(array), n));
+  return n === undefined ? array[0] : array.slice(0, n);
 };
 
 // Call iterator(value, key, collection) for each element of collection
@@ -113,7 +112,7 @@ bae.map = function (collection, iterator) {
 // Determine if the array or object contains a given value (using `===`).
 bae.contains = function (collection, target) {
   // TIP: Many iteration problems can be most easily expressed in
-  // terms of reduce(). Here's a freebie to demonstrate!
+  // terms of reduce().
   return bae.reduce(
     collection,
     function (wasFound, item) {
