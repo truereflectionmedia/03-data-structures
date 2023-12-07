@@ -3,6 +3,11 @@ body {
   overflow-y: scroll;
 }
 
+:root {
+  --red: #fb5844;
+  --black: #292929;
+}
+
 .jasmine_html-reporter {
   width: 100%;
   background-color: #eee;
@@ -44,11 +49,13 @@ body {
   position: relative;
 }
 .jasmine_html-reporter .jasmine-banner .jasmine-title {
-  background: url("wb-logo-90-55.png");
+  background: url("wb-appicon-80.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
   display: block;
   float: left;
-  width: 90px;
-  height: 55px;
+  width: 40px;
+  height: 40px;
 }
 .jasmine_html-reporter .jasmine-banner .jasmine-version {
   margin-left: 14px;
@@ -82,14 +89,14 @@ body {
   font-size: 14px;
 }
 .jasmine_html-reporter .jasmine-symbol-summary li.jasmine-passed:before {
-  color: #007069;
+  color: var(--black);
   content: "•";
 }
 .jasmine_html-reporter .jasmine-symbol-summary li.jasmine-failed {
   line-height: 9px;
 }
 .jasmine_html-reporter .jasmine-symbol-summary li.jasmine-failed:before {
-  color: #ca3a11;
+  color: var(--red);
   content: "×";
   font-weight: bold;
   margin-left: -1px;
@@ -151,11 +158,11 @@ body {
 }
 .jasmine_html-reporter .jasmine-bar.jasmine-failed,
 .jasmine_html-reporter .jasmine-bar.jasmine-errored {
-  background-color: #ca3a11;
+  background-color: var(--red);
   border-bottom: 1px solid #eee;
 }
 .jasmine_html-reporter .jasmine-bar.jasmine-passed {
-  background-color: #007069;
+  background-color: var(--black);
 }
 .jasmine_html-reporter .jasmine-bar.jasmine-incomplete {
   background-color: #bababa;
@@ -207,10 +214,10 @@ body {
   margin-bottom: 7px;
 }
 .jasmine_html-reporter .jasmine-summary li.jasmine-passed a {
-  color: #007069;
+  color: var(--black);
 }
 .jasmine_html-reporter .jasmine-summary li.jasmine-failed a {
-  color: #ca3a11;
+  color: var(--red);
 }
 .jasmine_html-reporter .jasmine-summary li.jasmine-empty a {
   color: #ba9d37;
@@ -252,7 +259,7 @@ body {
   .jasmine-failures
   .jasmine-spec-detail
   .jasmine-description {
-  background-color: #ca3a11;
+  background-color: var(--red);
   color: white;
 }
 .jasmine_html-reporter
